@@ -1,0 +1,4 @@
+.idea
+wp-content/themes/advokat-zv/node_modules
+wp-content/themes/advokat-zv/bower_components
+wp-config.php
