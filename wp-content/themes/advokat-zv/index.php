@@ -1,3 +1,4 @@
+<?php get_header() ?>
 <section id="services-for-individual">
     <div class="container">
         <h2>Услуги адвоката физическим лицам</h2>
@@ -117,3 +118,4 @@
         </ul>
     </div>
 </section>
+<?php get_footer() ?>
