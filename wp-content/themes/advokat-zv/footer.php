@@ -10,7 +10,7 @@
  */
 
 ?>
-<div id="map"></div>
+
 </div><!-- #content -->
 
 <footer class="site-footer" role="contentinfo">

@@ -89,6 +89,7 @@
                 </div>
             </div>
         </nav>
+        <?php if (is_home()) : ?>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 about">
@@ -144,6 +145,7 @@
                 </div>
             </div>
         </div>
+        <?php endif ?>
     </header><!-- #masthead -->
 
     <div id="content" class="site-content">

@@ -1,5 +1,7 @@
 
 footer {
+  background: #f0f0f0;
+  border-top: solid 1px #eaeaea;
   padding: 30px 0;
   color: #666;
   @include respond-to(all-handhelds) {

@@ -60,12 +60,9 @@ function setMap() {
 
 $(document).ready(function () {
     setDynamicParams();
-    setHeaderSize();
     setSlidingEffectToDropdowns();
-    setMap();
 });
 
 $(window).resize(function () {
     setDynamicParams();
-    setHeaderSize();
 });

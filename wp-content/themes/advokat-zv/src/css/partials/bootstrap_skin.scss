@@ -1,5 +1,6 @@
 .navbar {
   border-radius: 0;
+  margin-bottom: 0;
 }
 
 .navbar-default {
@@ -48,7 +49,7 @@
 }
 
 .dropdown-menu {
-  background: rgba(255, 255, 255, .4);
+  background: rgba(255, 255, 255, 1);
   @include respond-to(small-desktops) {
     background: rgba(255, 255, 255, 1);
   }
@@ -59,6 +60,10 @@
     text-align: center;
   }
 }
+
+.dropdown-menu > li > a {
+   color: #333 !important;
+ }
 
 .dropdown-menu > li > a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-text {
   @include respond-to(small-desktops) {
@@ -82,4 +87,14 @@ legend, pre {
 
 .media-body, .media-left, .media-right {
   vertical-align: middle;
+}
+
+.home {
+  .dropdown-menu > li > a {
+    color: inherit !important;
+  }
+
+  .dropdown-menu {
+    opacity: .4;
+  }
 }
