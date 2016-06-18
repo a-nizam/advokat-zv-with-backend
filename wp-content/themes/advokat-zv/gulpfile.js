@@ -8,14 +8,13 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
     cleanCSS = require('gulp-clean-css'),
-    clean = require('gulp-clean'),
     htmlReplace = require('gulp-html-replace');
 
 var path = {
     dist: {
         php: '',
         js: 'js/',
-        css: 'css/',
+        css: '',
         img: 'img/',
         fonts: 'fonts/'
     },
@@ -32,21 +31,15 @@ var path = {
         css: 'src/css/**/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
-    },
-    clean: 'dist'
+    }
 };
-
-gulp.task('clean', function () {
-    gulp.src(path.clean)
-        .pipe(clean())
-});
 
 gulp.task('build:php', function () {
     gulp.src(path.src.php)
         .pipe(rigger())
         .pipe(htmlReplace({
-            css: 'css/style.css',
-            js: 'js/script.js'
+            css: '',
+            js: ''
         }))
         .pipe(gulp.dest(path.dist.php))
 });

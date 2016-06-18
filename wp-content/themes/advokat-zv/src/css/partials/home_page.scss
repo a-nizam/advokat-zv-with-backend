@@ -1,17 +1,17 @@
 
 header {
   font-size: 1.1429em;
-  background: url("../img/bg/header-bg-lg.jpg") no-repeat center 0 / cover;
+  background: url("img/bg/header-bg-lg.jpg") no-repeat center 0 / cover;
   color: #fff;
   @include respond-to(small-desktops) {
-    background: url("../img/bg/header-bg-md.jpg") no-repeat center 0 / cover;
+    background: url("img/bg/header-bg-md.jpg") no-repeat center 0 / cover;
   }
   @include respond-to(tablets) {
-    background: url("../img/bg/header-bg-sm.jpg") no-repeat center 0 / cover;
+    background: url("img/bg/header-bg-sm.jpg") no-repeat center 0 / cover;
     font-size: 1em;
   }
   @include respond-to(all-handhelds) {
-    background: url("../img/bg/header-bg-xs.jpg") no-repeat center 0 / cover;
+    background: url("img/bg/header-bg-xs.jpg") no-repeat center 0 / cover;
   }
   #logo-and-contacts {
     padding-top: 15px;
