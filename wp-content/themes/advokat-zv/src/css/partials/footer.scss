@@ -1,0 +1,52 @@
+
+footer {
+  padding: 30px 0;
+  color: #666;
+  @include respond-to(all-handhelds) {
+    .container > div + div {
+      margin-top: 10px;
+    }
+  }
+  a, a:link, a:visited, a:hover, a:focus, a:active {
+    color: #666;
+  }
+  a:hover, a:focus, a:active {
+    text-decoration: underline;
+  }
+  .logo {
+    .name {
+      font-size: 28px;
+    }
+  }
+  .social {
+    text-align: center;
+    padding-top: 15px;
+    @include respond-to(all-handhelds) {
+      padding-top: 0;
+    }
+    img {
+      opacity: .6;
+      &:hover {
+        opacity: .9;
+      }
+    }
+    a + a img {
+      margin-left: 10px;
+    }
+  }
+  .contacts {
+    text-align: right;
+    @include respond-to(all-handhelds) {
+      text-align: center;
+    }
+    .adress {
+      font-size: 18px;
+    }
+    .phone {
+      font-size: 24px;
+    }
+  }
+  .copyright {
+    margin-top: -15px;
+  }
+}
