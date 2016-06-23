@@ -85,6 +85,11 @@ legend, pre {
   color: #fff;
 }
 
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .media-body, .media-left, .media-right {
   vertical-align: middle;
 }
@@ -92,6 +97,9 @@ legend, pre {
 .home {
   .dropdown-menu > li > a {
     color: inherit !important;
+    &:hover, &:focus {
+      color: #333 !important;
+    }
   }
 
   .dropdown-menu {

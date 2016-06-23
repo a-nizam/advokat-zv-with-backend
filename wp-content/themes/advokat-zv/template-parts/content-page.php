@@ -21,12 +21,11 @@
         ));
         ?>
     </div><!-- .entry-content -->
-
+    <br/>
     <?php if (get_edit_post_link()) : ?>
         <?php
         edit_post_link(
             sprintf(
-            /* translators: %s: Name of current post */
                 esc_html__('Редактировать %s', 'advokat-zv'),
                 the_title('<span class="screen-reader-text">"', '"</span>', false)
             ),

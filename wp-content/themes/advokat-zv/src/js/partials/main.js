@@ -58,9 +58,20 @@ function setMap() {
     }
 }
 
+function setActiveMenuItem() {
+    var activeLi = $('a[href="' + window.location + '"]');
+    if (activeLi.parent().parent().is('.dropdown-menu')) {
+        activeLi.parent().parent().parent().addClass('active');
+    }
+    else {
+        activeLi.parent().addClass('active');
+    }
+}
+
 $(document).ready(function () {
     setDynamicParams();
     setSlidingEffectToDropdowns();
+    setActiveMenuItem();
 });
 
 $(window).resize(function () {

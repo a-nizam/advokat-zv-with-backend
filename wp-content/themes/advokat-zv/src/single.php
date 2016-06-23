@@ -6,30 +6,45 @@
  *
  * @package advokat-zv
  */
-
-get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php
-		while ( have_posts() ) : the_post();
-
-			get_template_part( 'template-parts/content', get_post_format() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+?>
+<?php get_header() ?>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-5 sidebar">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Услуги адвоката</h3>
+                </div>
+                <div class="panel-body">
+                    <?php $query = new WP_Query(array('category_name' => 'services', 'posts_per_page' => 20, 'order' => 'ASC')) ?>
+                    <?php if ($query->have_posts()) : ?>
+                        <?php while ($query->have_posts()) : $query->the_post() ?>
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="<?php the_permalink() ?>">
+                                        <?php the_post_thumbnail() ?>
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">
+                                        <a href="<?php the_permalink() ?>">
+                                            <?php the_title() ?>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        <?php endwhile ?>
+                    <?php endif ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 col-md-8 col-sm-7">
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post() ?>
+                    <?php the_content() ?>
+                <?php endwhile ?>
+            <?php endif ?>
+        </div>
+    </div>
+</div>
+<?php get_footer() ?>

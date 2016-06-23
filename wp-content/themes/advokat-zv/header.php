@@ -30,7 +30,7 @@
                 <div class="row">
                     <div id="logo" class="col-lg-4 col-md-5 col-sm-5 col-xs-12">
                         <a href="<?php echo esc_url(home_url('/')); ?>" title="Адвокат" class="logo">
-                            <h1><?php bloginfo('name'); ?></h1>
+                            <div class="title"><?php bloginfo('name'); ?></div>
                         </a>
                     </div>
                     <div
@@ -59,8 +59,8 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="<?php echo esc_url(home_url('/')); ?>">Главная<span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Услуги</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/')); ?>">Главная<span class="sr-only">(current)</span></a></li>
+                        <li><a href="<?php echo get_category_link(2) ?>">Услуги</a></li>
                         <li><a href="#">Вопрос-ответ</a></li>
                         <li><a href="#">СМИ</a></li>
                         <li><a href="#">Новости</a></li>
@@ -72,7 +72,7 @@
                                 <li><a href="#">Стоимость услуг</a></li>
                                 <li><a href="#">Практика</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Контакты</a></li>
+                                <li><a href="<?php the_permalink(75) ?>">Контакты</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -95,51 +95,7 @@
                     <div class="services">Услуги профессионального адвоката на страже ваших интересов.</div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 question">
-                    <form class="form-horizontal">
-                        <fieldset>
-                            <legend>Заявка на консультацию</legend>
-                            <div class="form-group">
-                                <label for="inputName"
-                                       class="col-lg-2 col-md-2 col-sm-2 col-xs-12 control-label">ФИО</label>
-                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <input class="form-control" id="inputName" placeholder="ФИО" type="text">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputCity"
-                                       class="col-lg-2 col-md-2 col-sm-2 col-xs-12 control-label">Город</label>
-                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <input class="form-control" id="inputCity" placeholder="Город" type="text">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputCity" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 control-label">Телефон</label>
-                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <input class="form-control" id="inputPhone" placeholder="Телефон" type="text">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail"
-                                       class="col-lg-2 col-md-2 col-sm-2 col-xs-12 control-label">Email</label>
-                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <input class="form-control" id="inputEmail" placeholder="Email" type="text">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="textAreaQuestion"
-                                       class="col-lg-2 col-md-2 col-sm-2 col-xs-12 control-label">Вопрос</label>
-                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <textarea class="form-control" rows="3" id="textAreaQuestion"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div
-                                    class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-10 col-sm-offset-2 col-xs-12">
-                                    <button type="submit" class="btn btn-default">Отправить</button>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
+                    <?php echo do_shortcode('[contact-form-7 id="93" title="Заявка на консультацию"]') ?>
                 </div>
             </div>
         </div>

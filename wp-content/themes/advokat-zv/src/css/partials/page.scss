@@ -1,3 +1,23 @@
 .page {
-
+  .entry-content {
+    a, a:link, a:visited, a:hover, a:focus, a:active {
+      color: #333;
+      outline: none;
+    }
+  }
+  legend {
+    color: #333;
+  }
+  label {
+    @include respond-to(all-handhelds) {
+      text-align: left;
+    }
+  }
+  div.wpcf7-validation-errors {
+    border: none;
+  }
+  div.wpcf7-response-output {
+    margin: 0;
+    color: #f00;
+  }
 }

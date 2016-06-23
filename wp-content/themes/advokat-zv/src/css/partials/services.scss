@@ -1,0 +1,39 @@
+.category-services {
+  img {
+    margin: 10px;
+  }
+  .alignleft {
+    float: left;
+    margin-left: 0;
+    @include respond-to(all-handhelds) {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .alignright {
+    float: right;
+    margin-right: 0;
+    @include respond-to(all-handhelds) {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sidebar {
+    img {
+      margin: 0;
+    }
+    a, a:link, a:visited, a:hover, a:focus, a:active {
+      color: #333;
+      outline: 0;
+    }
+    .media-body {
+      width: auto;
+    }
+  }
+}
