@@ -69,8 +69,8 @@
                                aria-expanded="false">Об
                                 адвокате <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Стоимость услуг</a></li>
-                                <li><a href="#">Практика</a></li>
+                                <li><a href="<?php the_permalink(95) ?>">Стоимость услуг</a></li>
+                                <li><a href="<?php the_permalink(98) ?>">Практика</a></li>
                                 <li class="divider"></li>
                                 <li><a href="<?php the_permalink(75) ?>">Контакты</a></li>
                             </ul>
