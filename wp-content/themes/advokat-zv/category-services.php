@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="col-lg-9 col-md-9 col-sm-9">
-                <?php $query = new WP_Query(array('category_id' => 72, 'posts_per_page' => 1)) ?>
+                <?php $query = new WP_Query(array('p' => 72)) ?>
                 <?php if ($query->have_posts()) : ?>
                     <?php while ($query->have_posts()) : $query->the_post() ?>
                         <?php the_content() ?>

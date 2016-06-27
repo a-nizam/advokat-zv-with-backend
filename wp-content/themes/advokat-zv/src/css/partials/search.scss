@@ -1,0 +1,19 @@
+.search {
+  .item {
+    height: 250px;
+    @include respond-to(all-handhelds) {
+      height: auto;
+      margin-top: 25px;
+    }
+    .date {
+      color: #878787;
+      font-size: 0.9em;
+    }
+    .more-link {
+      display: block;
+    }
+  }
+  .nav-wrapper {
+    display: inline-block;
+  }
+}

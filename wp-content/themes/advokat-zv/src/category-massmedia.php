@@ -1,7 +1,1 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Nizam
- * Date: 27.06.2016
- * Time: 14:04
- */
+<?php require_once("template-parts/news_and_media_template.php") ?>

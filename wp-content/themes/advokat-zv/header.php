@@ -61,9 +61,8 @@
                     <ul class="nav navbar-nav">
                         <li><a href="<?php echo esc_url(home_url('/')); ?>">Главная<span class="sr-only">(current)</span></a></li>
                         <li><a href="<?php echo get_category_link(2) ?>">Услуги</a></li>
-                        <li><a href="#">Вопрос-ответ</a></li>
-                        <li><a href="#">СМИ</a></li>
-                        <li><a href="#">Новости</a></li>
+                        <li><a href="<?php echo get_category_link(4) ?>">СМИ</a></li>
+                        <li><a href="<?php echo get_category_link(3) ?>">Новости</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">Об

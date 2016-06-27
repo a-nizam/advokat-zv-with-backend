@@ -9,22 +9,10 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php advokat_zv_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php advokat_zv_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+<article id="post-<?php the_ID(); ?>" class="item col-lg-4 col-md-4 col-sm-6">
+    <div class="entry-summary">
+        <h4><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h4>
+        <div class="date"><?php echo get_the_date("j F Y, G:i") ?></div>
+        <?php the_content("Читать полностью") ?>
+    </div><!-- .entry-summary -->
 </article><!-- #post-## -->
