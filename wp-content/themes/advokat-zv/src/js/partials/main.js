@@ -72,12 +72,11 @@ function setActiveMenuItem() {
 function setWhatForCarousel() {
     function setArrowsPos() {
         var arrows = block.whatFor.find('.icon-arrow-left, .icon-arrow-right');
-        var topOffset = parseInt(block.whatFor.css('padding-top'));
-        topOffset += parseInt(block.whatFor.find('.title').height());
+        var topOffset = parseInt(block.whatFor.find('.title').height());
         topOffset += parseInt(block.whatFor.find('.content').css('margin-top'));
-        topOffset += parseInt(parseInt(block.whatFor.find('.content').height()) / 2);
+        topOffset += parseInt(parseInt(block.whatFor.find('.owl-stage-outer').height()) / 2);
         topOffset -= parseInt(parseInt(arrows.height()) / 2);
-        arrows.css('top', topOffset);
+        arrows.animate({'top': topOffset});
     }
 
     var whatForCarousel = block.whatFor.find('.owl-carousel').owlCarousel({

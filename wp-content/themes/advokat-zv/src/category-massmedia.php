@@ -1,1 +1,0 @@
-<?php require_once("template-parts/news_and_media_template.php") ?>

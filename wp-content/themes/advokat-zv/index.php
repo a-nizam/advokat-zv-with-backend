@@ -19,162 +19,29 @@ get_header(); ?>
             <section id="services-for-individual">
                 <div class="container">
                     <h2>Услуги адвоката физическим лицам</h2>
-                    <ul>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(15) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-1.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(15) ?>">Уголовные дела</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(45) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-6.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(45) ?>">Трудовые споры</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(60) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-11.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(60) ?>">Исполнительное
-                                            производство</a></h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(33) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-2.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(33) ?>">Исковое заявление в
-                                            суд</a></h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(48) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-2.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(48) ?>">Кредитные споры</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(63) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-12.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(63) ?>">Наследственные
-                                            споры</a></h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(36) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-3.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(36) ?>">Семейные споры</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(51) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-8.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(51) ?>">Защита прав
-                                            потребителей</a></h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(66) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-13.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(66) ?>">Урегулирование
-                                            споров</a></h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(39) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-4.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(39) ?>">Помощь при ДТП</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(54) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-9.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(54) ?>">Земельные споры</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(69) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-14.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(69) ?>">Жилищные споры</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(42) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-5.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(42) ?>">Взыскание долгов</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="media">
-                                <div class="media-left"><a href="<?php the_permalink(57) ?>"><img
-                                            src="<?php echo get_template_directory_uri() ?>/img/icons/icon-10.png"
-                                            alt=""></a></div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="<?php the_permalink(57) ?>">Представление в
-                                            суде</a></h4>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <?php $query = new WP_Query(array('category_name' => 'services', 'posts_per_page' => 20, 'order' => 'ASC')) ?>
+                    <?php if ($query->have_posts()) : ?>
+                        <ul>
+                            <?php while ($query->have_posts()) : $query->the_post() ?>
+                                <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="<?php the_permalink() ?>">
+                                                <?php the_post_thumbnail() ?>
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">
+                                                <a href="<?php the_permalink() ?>">
+                                                    <?php the_title() ?>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php endwhile ?>
+                        </ul>
+                    <?php endif ?>
                 </div>
             </section>
             <section id="what-for">

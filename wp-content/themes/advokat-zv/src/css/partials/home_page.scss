@@ -8,7 +8,7 @@
       height: 56px;
       margin-top: 10px;
       @include respond-to(all-handhelds) {
-        margin-top: 30px;
+        margin-top: 0;
         height: 100px;
       }
       h4 {

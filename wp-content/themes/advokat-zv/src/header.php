@@ -37,7 +37,7 @@
                     </div>
                     <div
                         class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-0 col-xs-12 contacts">
-                        г.Москва, <br
+                        г. Москва, <br
                             class="hidden-xs"/>
                         пер. Лебяжий 8/4, стр. 1
                     </div>
@@ -62,8 +62,8 @@
                     <ul class="nav navbar-nav">
                         <li><a href="<?php echo esc_url(home_url('/')); ?>">Главная<span class="sr-only">(current)</span></a></li>
                         <li><a href="<?php echo get_category_link(2) ?>">Услуги</a></li>
-                        <li><a href="<?php echo get_category_link(4) ?>">СМИ</a></li>
-                        <li><a href="<?php echo get_category_link(3) ?>">Новости</a></li>
+                        <li><a href="<?php echo get_post_type_archive_link('massmedia') ?>">СМИ</a></li>
+                        <li><a href="<?php echo get_post_type_archive_link('news') ?>">Новости</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">Об
@@ -77,7 +77,7 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <form class="navbar-form navbar-left сol-xs-8 col-xs-offset-2" role="search">
+                        <form class="navbar-form navbar-left сol-xs-8 col-xs-offset-2" role="search" action="/">
                             <div class="form-group">
                                 <input name="s" class="form-control" placeholder="Поиск" type="text">
                             </div>

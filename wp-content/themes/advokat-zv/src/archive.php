@@ -1,51 +1,20 @@
-<?php
-/**
- * The template for displaying archive pages.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package advokat-zv
- */
-
-get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_header() ?>
+	<div class="container" xmlns="http://www.w3.org/1999/html">
+		<?php if (have_posts()) : ?>
+			<div class="row">
+				<?php while (have_posts()) : the_post() ?>
+					<article id="post-<?php the_ID(); ?>" class="item col-lg-4 col-md-4 col-sm-6">
+						<h4><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h4>
+						<div class="date"><?php echo get_the_date("j F Y, G:i") ?></div>
+						<?php the_content("Читать полностью") ?>
+					</article>
+				<?php endwhile ?>
+			</div>
+			<div class="text-center">
+				<div class="nav-wrapper">
+					<?php wp_bootstrap_pagination() ?>
+				</div>
+			</div>
+		<?php endif ?>
+	</div>
+<?php get_footer() ?>

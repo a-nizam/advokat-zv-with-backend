@@ -222,6 +222,35 @@ function wp_bootstrap_pagination($args = array())
         echo $args['before_output'] . $echo . $args['after_output'];
 }
 
+
+/**
+ * Admin panel settings
+ */
+
+if (!is_admin()) {
+    add_action('init', create_function('$a', "remove_action( 'init', 'wp_version_check' );"), 2);
+    add_filter('pre_option_update_core', create_function('$a', "return null;"));
+
+    add_filter('pre_site_transient_update_core', create_function('$a', "return null;"));
+}
+
+function remove_menus()
+{
+    remove_submenu_page('index.php', 'update-core.php');
+    remove_menu_page('edit-comments.php');          // Комментарии
+    remove_menu_page('themes.php');                 // Внешний вид
+    remove_menu_page('plugins.php');                // Плагины
+    remove_menu_page('users.php');                  // Пользователи
+    remove_menu_page('tools.php');                  // Инструменты
+    remove_menu_page('options-general.php');        // Настройки
+    remove_menu_page('wpseo_dashboard');            // Yoast SEO
+    remove_menu_page('wpcf7');                      // Contact Form 7
+}
+
+if (!is_admin()) {
+    add_action('admin_menu', 'remove_menus');
+}
+
 /**
  * Implement the Custom Header feature.
  */

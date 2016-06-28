@@ -1,4 +1,4 @@
-.category {
+.archive, .category {
   .item {
     height: 250px;
     @include respond-to(all-handhelds) {
