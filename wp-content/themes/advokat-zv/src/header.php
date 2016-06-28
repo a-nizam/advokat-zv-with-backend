@@ -37,13 +37,12 @@
                     </div>
                     <div
                         class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-0 col-xs-12 contacts">
-                        г.Махачкала, <br
-                            class="hidden-xs"/>пр-т
-                        Р. Гамзатова, д. 12 "а"
+                        г.Москва, <br
+                            class="hidden-xs"/>
+                        пер. Лебяжий 8/4, стр. 1
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 contacts"><a href="tel:+79896655778">+7 (989)
-                            66-55-778</a><br/><a
-                            href="mailto:info@logix.su">info@logix.su</a></div>
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 contacts"><a href="tel:+79250772021">+7 (925) 077-20-21</a><br/><a
+                            href="mailto:info@advokat-zv.ru">info@advokat-zv.ru</a></div>
                 </div>
             </div>
         </div>

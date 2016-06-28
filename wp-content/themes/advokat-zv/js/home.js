@@ -1,6 +1,7 @@
 
 $(document).ready(function () {
     setHeaderSize();
+    setWhatForCarousel();
     setMap();
 });
 

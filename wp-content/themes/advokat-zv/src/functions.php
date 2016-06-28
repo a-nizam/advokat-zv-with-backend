@@ -108,7 +108,9 @@ add_action('widgets_init', 'advokat_zv_widgets_init');
  */
 function advokat_zv_scripts()
 {
-    wp_enqueue_style('advokat-zv-style', get_stylesheet_uri());
+    wp_enqueue_style('owl_style', get_template_directory_uri() . "/css/owl.carousel.min.css", false, "2.16beta");
+    wp_enqueue_style('owl_theme_default', get_template_directory_uri() . "/css/owl.theme.default.min.css", false, "2.16beta");
+    wp_enqueue_style('advokat-zv-style', get_stylesheet_uri(), array('owl_style', 'owl_theme_default'));
 
     wp_deregister_script('jquery');
     wp_register_script('jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.min.js', false, '2.2.4', true);
@@ -124,7 +126,9 @@ function advokat_zv_scripts()
 
     wp_enqueue_script('ymaps', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU', array('jquery'), '20151215', true);
 
-    wp_enqueue_script('advokat-zv-script', get_template_directory_uri() . '/js/script.js', array('jquery', 'ymaps'), '20151215', true);
+    wp_enqueue_script('owl_script', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '2.1.6beta', true);
+
+    wp_enqueue_script('advokat-zv-script', get_template_directory_uri() . '/js/script.js', array('jquery', 'ymaps', 'owl_script'), '20151215', true);
 
     if (is_home()) {
         wp_enqueue_script('advokat-zv-home', get_template_directory_uri() . '/js/home.js', array('jquery', 'ymaps', 'advokat-zv-script'), '20151215', true);

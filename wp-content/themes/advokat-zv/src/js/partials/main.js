@@ -5,7 +5,8 @@ var param = {
 };
 var block = {
     header: $('header'),
-    dropdown: $('.dropdown')
+    dropdown: $('.dropdown'),
+    whatFor: $('#what-for')
 };
 
 function setDynamicParams() {
@@ -45,12 +46,12 @@ function setMap() {
 
     function init() {
         myMap = new ymaps.Map("map", {
-            center: [42.9806398, 47.508374],
+            center: [55.74728413815523, 37.6090101269836],
             zoom: 18,
             controls: []
         });
         myMap.behaviors.disable('scrollZoom');
-        placeMark = new ymaps.Placemark([42.9806398, 47.508374], {
+        placeMark = new ymaps.Placemark([55.74728413815523, 37.6090101269836], {
             hintContent: 'Logix',
             balloonContent: 'Создание сайтов'
         });
@@ -66,6 +67,37 @@ function setActiveMenuItem() {
     else {
         activeLi.parent().addClass('active');
     }
+}
+
+function setWhatForCarousel() {
+    function setArrowsPos() {
+        var arrows = block.whatFor.find('.icon-arrow-left, .icon-arrow-right');
+        var topOffset = parseInt(block.whatFor.css('padding-top'));
+        topOffset += parseInt(block.whatFor.find('.title').height());
+        topOffset += parseInt(block.whatFor.find('.content').css('margin-top'));
+        topOffset += parseInt(parseInt(block.whatFor.find('.content').height()) / 2);
+        topOffset -= parseInt(parseInt(arrows.height()) / 2);
+        arrows.css('top', topOffset);
+    }
+
+    var whatForCarousel = block.whatFor.find('.owl-carousel').owlCarousel({
+        loop: true,
+        dots: true,
+        items: 1,
+        autoHeight: true
+    });
+    setArrowsPos();
+    block.whatFor.find('.icon-arrow-left').bind('click', function () {
+        whatForCarousel.trigger('prev.owl.carousel');
+    });
+    block.whatFor.find('.icon-arrow-right').bind('click', function () {
+        whatForCarousel.trigger('next.owl.carousel');
+    });
+    whatForCarousel.on('changed.owl.carousel', function (event) {
+        setTimeout(function () {
+            setArrowsPos();
+        }, 300);
+    });
 }
 
 $(document).ready(function () {

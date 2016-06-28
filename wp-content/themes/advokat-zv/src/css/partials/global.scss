@@ -42,6 +42,18 @@
   src: url("fonts/Proxima_Nova_Black.otf") format('opentype');
 }
 
+.icon-arrow-left {
+  background: url("img/icons/icon-arrow-left.png");
+  width: 30px;
+  height: 49px;
+}
+
+.icon-arrow-right {
+  background: url("img/icons/icon-arrow-right.png");
+  width: 30px;
+  height: 49px;
+}
+
 body {
   background: $bg-color;
   font-family: 'Proxima Nova';

@@ -40,9 +40,54 @@
   }
 }
 
+#what-for {
+  background: #f7f7f7;
+  margin-top: 50px;
+  padding: 50px 0;
+  .container {
+    position: relative;
+  }
+  .icon-arrow-left, .icon-arrow-right {
+    position: absolute;
+    opacity: .6;
+    cursor: pointer;
+    @include respond-to(narrow-handhelds) {
+      display: none;
+    }
+    &:hover {
+      opacity: .8;
+    }
+  }
+  .icon-arrow-left {
+    left: 15px;
+  }
+  .icon-arrow-right {
+    right: 15px;
+  }
+  .title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .content {
+    font-size: 16px;
+    margin-top: 70px;
+    @include respond-to(all-handhelds) {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include respond-to(handhelds) {
+      width: 70%;
+    }
+    @include respond-to(narrow-handhelds) {
+      width: 90%;
+    }
+  }
+}
+
 #map {
   height: 400px;
-  margin-top: 50px;
 }
 
 .home #content {

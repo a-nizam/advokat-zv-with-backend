@@ -23,8 +23,8 @@
             <a href="http://instagram.com" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/img/icons/inst.png" alt="inst"></a>
         </div>
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 contacts">
-            <div class="adress">пр-т Р. Гамзатова, д. 12 "а"</div>
-            <div class="phone"><a href="tel:+79896655778">+7 (989) 66-55-778</a></div>
+            <div class="adress">пер. Лебяжий 8/4, стр. 1</div>
+            <div class="phone"><a href="tel:+79250772021">+7 (925) 077-20-21</a></div>
         </div>
         <div class="copyright col-lg-12 col-md-12 col-sm-12 col-xs-12">2016, &copy; Адвокат Захаряев Вадим</div>
     </div>
