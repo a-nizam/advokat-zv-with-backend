@@ -2,7 +2,7 @@
 $(document).ready(function () {
     setHeaderSize();
     setWhatForCarousel();
-    setMap();
+    // setMap();
 });
 
 $(window).resize(function () {
