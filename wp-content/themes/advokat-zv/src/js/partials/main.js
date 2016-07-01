@@ -95,7 +95,7 @@ function setWhatForCarousel() {
     whatForCarousel.on('changed.owl.carousel', function (event) {
         setTimeout(function () {
             setArrowsPos();
-        }, 300);
+        }, 500);
     });
 }
 
