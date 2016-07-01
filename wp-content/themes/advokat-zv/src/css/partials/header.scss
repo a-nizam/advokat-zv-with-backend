@@ -13,7 +13,7 @@ header {
   @include respond-to(all-handhelds) {
     background-img: url("img/bg/header-bg-xs.jpg");
     background-repeat: no-repeat;
-    background-position: 0 center;
+    background-position: center 0;
     background-size: cover;
   }
   #logo-and-contacts {
