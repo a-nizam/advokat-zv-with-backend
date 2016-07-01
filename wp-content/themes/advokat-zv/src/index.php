@@ -166,7 +166,7 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <div id="map"></div>
+<!--            <div id="map"></div>-->
         </main><!-- #main -->
     </div><!-- #primary -->
 <?php
