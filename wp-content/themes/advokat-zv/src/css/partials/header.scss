@@ -11,7 +11,10 @@ header {
     font-size: 1em;
   }
   @include respond-to(all-handhelds) {
-    background: url("img/bg/header-bg-xs.jpg") no-repeat center 0 / cover;
+    background: url("img/bg/header-bg-xs.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: cover;
   }
   #logo-and-contacts {
     padding-top: 15px;
