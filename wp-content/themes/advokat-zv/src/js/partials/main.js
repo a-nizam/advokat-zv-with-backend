@@ -6,7 +6,8 @@ var param = {
 var block = {
     header: $('header'),
     dropdown: $('.dropdown'),
-    whatFor: $('#what-for')
+    whatFor: $('#what-for'),
+    practice: $('#practice')
 };
 
 function setDynamicParams() {
@@ -97,6 +98,15 @@ function setWhatForCarousel() {
             setArrowsPos();
         }, 500);
     });
+}
+
+function setPracticeCarousel() {
+    var practiceCarousel = block.practice.find('.owl-carousel').owlCarousel({
+        loop: true,
+        dots: true,
+        items: 1
+    });
+    block.practice.find('.more-link').addClass('btn btn-default').wrap("<div class='more-link-wrapper'></div>");
 }
 
 $(document).ready(function () {

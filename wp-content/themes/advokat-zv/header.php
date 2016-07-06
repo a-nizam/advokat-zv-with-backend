@@ -39,7 +39,8 @@
                             class="hidden-xs"/>
                         пер. Лебяжий 8/4, стр. 1
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 contacts"><a href="tel:+79250772021">+7 (925) 077-20-21</a><br/><a
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 contacts"><a href="tel:+79250772021">+7 (925)
+                            077-20-21</a><br/><a
                             href="mailto:info@advokat-zv.ru">info@advokat-zv.ru</a></div>
                 </div>
             </div>
@@ -58,7 +59,8 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                     <ul class="nav navbar-nav">
-                        <li><a href="<?php echo esc_url(home_url('/')); ?>">Главная<span class="sr-only">(current)</span></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/')); ?>">Главная<span
+                                    class="sr-only">(current)</span></a></li>
                         <li><a href="<?php echo get_category_link(2) ?>">Услуги</a></li>
                         <li><a href="<?php echo get_post_type_archive_link('massmedia') ?>">СМИ</a></li>
                         <li><a href="<?php echo get_post_type_archive_link('news') ?>">Новости</a></li>
@@ -68,7 +70,7 @@
                                 адвокате <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="<?php the_permalink(95) ?>">Стоимость услуг</a></li>
-                                <li><a href="<?php the_permalink(98) ?>">Практика</a></li>
+                                <li><a href="<?php echo get_post_type_archive_link('practice') ?>">Практика</a></li>
                                 <li class="divider"></li>
                                 <li><a href="<?php the_permalink(75) ?>">Контакты</a></li>
                             </ul>
@@ -86,17 +88,32 @@
             </div>
         </nav>
         <?php if (is_home()) : ?>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 about">
-                    <div class="name">Захаряев Вадим</div>
-                    <div class="services">Услуги профессионального адвоката на страже ваших интересов.</div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 question">
-                    <?php echo do_shortcode('[contact-form-7 id="93" title="Заявка на консультацию"]') ?>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 about">
+                        <div class="name">Захаряев Вадим</div>
+                        <div class="services">Услуги профессионального адвоката на страже ваших интересов.</div>
+                    </div>
+                    <div id="practice" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <?php $showPostsCount = 10 ?>
+                        <?php $query = new WP_Query(array('post_type' => 'practice', 'posts_per_page' => $showPostsCount, 'order' => 'DESC')) ?>
+                        <?php if ($query->have_posts()) : ?>
+                            <div class="owl-carousel owl-theme">
+                                <?php while ($query->have_posts()) : $query->the_post() ?>
+                                    <?php if (!($query->current_post % 2)) : ?>
+                                        <div class="item">
+                                    <?php endif ?>
+                                    <h4 class="<?php echo $query->current_post % 2 ? "last" : "" ?>"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h4>
+                                    <?php the_content("Читать полностью") ?>
+                                    <?php if ($query->current_post % 2 || $query->current_post == $query->post_count) : ?>
+                                        </div>
+                                    <?php endif ?>
+                                <?php endwhile ?>
+                            </div>
+                        <?php endif ?>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php endif ?>
     </header><!-- #masthead -->
 

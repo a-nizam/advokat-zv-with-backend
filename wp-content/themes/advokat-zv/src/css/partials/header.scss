@@ -96,7 +96,7 @@ header {
       }
     }
   }
-  .question {
+  #practice {
     margin-top: 70px;
     @include respond-to(full-hd) {
       margin-top: 140px;
@@ -110,19 +110,15 @@ header {
     @include respond-to(all-handhelds) {
       margin-top: 50px;
     }
-    label {
-      @include respond-to(all-handhelds) {
-        text-align: left;
-      }
+    .more-link-wrapper {
+      margin: 10px 0;
     }
-    span.wpcf7-not-valid-tip {
-      display: none;
+    .more-link {
+      color: #333;
+      padding: 4px 10px;
     }
-    div.wpcf7-validation-errors {
-      border: none;
-    }
-    div.wpcf7-response-output {
-      margin: 0;
+    h4.last {
+      margin-top: 20px;
     }
   }
 }
